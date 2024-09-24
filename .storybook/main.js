@@ -8,10 +8,13 @@ const config = {
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
+    "@storybook/addon-webpack5-compiler-babel"
   ],
   framework: {
     name: "@storybook/react-webpack5",
-    options: {},
+    options: {
+      saveFromControls: false
+    },
   },
   staticDirs: ["..\\public"],
 };
