@@ -6,9 +6,12 @@ export const StyledButton = styled(Button)`
   display: flex;
   flex-direction: row;
   align-items: center;
+
   color: ${({color}) => color} !important;
+  background: ${({ background }) => background} !important;
+  border: 5px ${({ border }) => border} !important;
 
   &:hover{
-    cursor: ${({disable, loading}) => disable || loading ? 'not-allowed' : 'pointer'};
+    cursor: ${({disabled, loading}) => disabled || loading ? 'not-allowed' : 'pointer'};
   };
 `;

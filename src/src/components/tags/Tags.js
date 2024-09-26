@@ -1,16 +1,20 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import generateStyledTagColor from "./utils/utils";
-import { Wrapper } from './Tags.styles';
+import { StyledTag, Wrapper } from './Tags.styles';
+import generateRandomColor from "./utils/utils";
 
 const Tags = ({ items, bordered, random }) => {
+
   return (
     <Wrapper>
-      {items.map((item, index) => (
-        <React.Fragment key={index}>
-          {generateStyledTagColor(item, bordered, random, index)}
-        </React.Fragment>
+      {items.map(item => (
+        <StyledTag
+          bordered={bordered}
+          color={generateRandomColor(random)}
+        >
+          {item}
+        </StyledTag>
       ))}
     </Wrapper>
   );

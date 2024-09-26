@@ -1,21 +1,34 @@
+import Icon, { setTwoToneColor } from '@ant-design/icons';
+import PropTypes from 'prop-types';
 import React from 'react';
-import { IconWrapper } from "./Icon.styles";
-import * as Icons from '@ant-design/icons'; // Importa todos los iconos de Ant Design
+import * as icons from '../icon/assets';
+import { iconSizeMap, iconSizes } from './constants/size';
 
+const StyledIcon = ({ icon, className, color, size, spin }) => {
 
-
-const StyledIcon = ({ icon, color, width, height }) => {
-  const AntIcon = Icons[icon];
-
-  if (!AntIcon) {
-    return <span>Not found</span>;
-  }
+  const iconComponent = icons[icon] ? icons[icon] : className
+  setTwoToneColor(color)
 
   return (
-    <IconWrapper color={color} width={width} height={height}>
-      <AntIcon />
-    </IconWrapper>
-  );
+    <Icon 
+      component={iconComponent}
+      style={{ color: color, fontSize: iconSizeMap[size]}}
+      spin={spin}
+    />
+  )
 };
+
+StyledIcon.propTypes = {
+  icon: PropTypes.string,
+  className: PropTypes.node,
+  color: PropTypes.string,
+  size: PropTypes.string,
+  spin: PropTypes.bool
+}
+
+StyledIcon.defaultProp = {
+  spin: false,
+  size: iconSizes.MEDIUM
+}
 
 export default StyledIcon;

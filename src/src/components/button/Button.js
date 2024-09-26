@@ -6,7 +6,7 @@ import { buttonVariants, variantConfig } from "./constants/variants";
 import { StyledButton } from "./Button.styles";
 
 const Button = ({ label, loading, disabled, onClick, color, variant, ...rest}) => {
-  const config = variantConfig(color, disabled);
+  const config = variantConfig(disabled, loading);
 
   return (
     <StyledButton

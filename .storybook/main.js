@@ -16,6 +16,6 @@ const config = {
       saveFromControls: false
     },
   },
-  staticDirs: ["..\\public"],
+  staticDirs: ["..\\public"]
 };
 export default config;
