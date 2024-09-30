@@ -10,17 +10,17 @@ const StyledIcon = ({ icon, className, color, size, spin }) => {
   setTwoToneColor(color)
 
   return (
-    <Icon 
-      component={iconComponent}
-      style={{ color: color, fontSize: iconSizeMap[size]}}
-      spin={spin}
-    />
+      <Icon 
+        component={iconComponent}
+        style={{ color: color, fontSize: iconSizeMap[size]}}
+        spin={spin}
+      />
   )
 };
 
 StyledIcon.propTypes = {
   icon: PropTypes.string,
-  className: PropTypes.node,
+  className: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.string,
   spin: PropTypes.bool

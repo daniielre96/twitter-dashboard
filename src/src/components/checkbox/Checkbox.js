@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import React from "react";
 
-
-
+import Typography from '../typography';
 import { StyledCheckbox } from "./Checkbox.styles";
 
 const Checkbox = ({ label, defaultChecked, disabled, onChange, ...rest}) => {
@@ -14,7 +13,7 @@ const Checkbox = ({ label, defaultChecked, disabled, onChange, ...rest}) => {
       onChange={onChange}
       {...rest}
     >
-      {label}
+      <Typography>{label}</Typography>
     </StyledCheckbox>
   );
 };

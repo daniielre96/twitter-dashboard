@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import { colorPalette, fontSizes } from '../../constants';
+import Typography from '../typography';
 import { StyledTag, Wrapper } from './Tags.styles';
 import generateRandomColor from "./utils/utils";
 
@@ -13,7 +15,7 @@ const Tags = ({ items, bordered, random }) => {
           bordered={bordered}
           color={generateRandomColor(random)}
         >
-          {item}
+          <Typography color={colorPalette.primary} weight={fontSizes.BODY_SMALL}>{item}</Typography>
         </StyledTag>
       ))}
     </Wrapper>

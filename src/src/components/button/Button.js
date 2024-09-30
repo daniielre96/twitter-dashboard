@@ -3,6 +3,10 @@ import React from "react";
 
 import { buttonVariants, variantConfig } from "./constants/variants";
 
+import Typography from '../typography';
+
+import { colorPalette } from '../../constants';
+
 import { StyledButton } from "./Button.styles";
 
 const Button = ({ label, loading, disabled, onClick, color, variant, ...rest}) => {
@@ -16,7 +20,9 @@ const Button = ({ label, loading, disabled, onClick, color, variant, ...rest}) =
       {...config[variant]}
       {...rest}
     >
-      {label}
+      <Typography color={color}>
+        {label}
+      </Typography>
     </StyledButton>
   );
 };

@@ -1,12 +1,16 @@
 import PropTypes from 'prop-types';
 import React from "react";
 
-import { fontStyleMap, fontSizes, colorPalette } from '../../constants';
+import { colorPalette, fontSizes, fontStyleMap } from '../../constants';
 
 import { StyledTypography } from "./Typography.style";
 
 const Typography = ({ children, color, align, weight, bold, uppercase, italic, underline, ...rest}) => {
-    const myStyle = fontStyleMap[weight];
+  
+  const defaultWeight = weight ? weight : fontSizes.BODY_MEDIUM;
+
+  const myStyle = fontStyleMap[defaultWeight];
+  
   return (
     <StyledTypography
       color={color}

@@ -14,7 +14,8 @@ PrimaryDefault.args = {
   label: 'Primary',
   loading: false,
   disabled: false,
-  variant: buttonVariants.PRIMARY
+  variant: buttonVariants.PRIMARY,
+  color: '#FFFFFF'
 }
 
 export const SuccessDefault = Template.bind({});
