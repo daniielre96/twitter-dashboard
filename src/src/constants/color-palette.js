@@ -7,4 +7,5 @@ export const colorPalette = {
   primary_plot: '#FFAD1F',
   secondary_plot: '#AAB8C2',
   white: '#FFFFFF',
+  pink: '#D74760'
 }
