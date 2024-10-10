@@ -8,9 +8,11 @@ export const StyledTag = styled(Tag)`
   border-color: ${({ color }) => color} !important;
   font-weight: bold;
   border-radius: 20px;
-  color: ${({ color }) => color} !important
+  color: ${({ color }) => color} !important;
+  margin: 5px 5px 5px 0;
 `;
 
 export const Wrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `;

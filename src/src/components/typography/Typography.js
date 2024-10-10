@@ -39,7 +39,8 @@ Typography.propTypes = {
   bold: PropTypes.bool,
   italic: PropTypes.bool,
   uppercase: PropTypes.bool,
-  underline: PropTypes.bool
+  underline: PropTypes.bool,
+  onClick: PropTypes.func
 }
 
 Typography.defaultProp = {
