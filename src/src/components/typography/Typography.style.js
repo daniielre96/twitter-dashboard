@@ -1,10 +1,9 @@
-import { Typography } from 'antd';
 import { styled } from 'styled-components';
 
-import 'typeface-roboto';
 import 'typeface-montserrat';
+import 'typeface-roboto';
 
-export const StyledTypography = styled(Typography)`
+export const StyledTypography = styled.p`
   margin: 0;
   color: ${({ color }) => color} !important;
   text-align: ${({ align }) => align} !important;

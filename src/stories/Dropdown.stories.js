@@ -1,5 +1,5 @@
+import { message } from "antd";
 import React from "react";
-import { message, Space } from "antd";
 
 import Dropdown from "../src/components/dropdown";
 
@@ -25,8 +25,12 @@ const items = [
   },
 ];
 
+const onClick = ({key}) => {
+  message.info(`Has clickado el item ${key}`)
+}
+
 export const PrimaryDefault = Template.bind({});
 PrimaryDefault.args = {
   items: items,
-  onClick: () => alert("Show"),
+  onClick: onClick,
 };

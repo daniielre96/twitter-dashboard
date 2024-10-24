@@ -1,37 +1,31 @@
+import { DownOutlined } from "@ant-design/icons";
+import { Space } from "antd";
 import PropTypes from "prop-types";
 import React from "react";
-import { DownOutlined } from "@ant-design/icons";
-import { message, Space } from "antd";
 
-import { colorPalette, fontSizes } from "../../constants";
 import Typography from "../typography";
-import { StyledDropdown } from "./Dropdown.styles";
-/*
-const onClick = ({ key }) => {
-  message.info(`Click on item ${key}`);
-};
+import { StyledDropdown, StyledMenu } from "./Dropdown.styles";
 
-const items = [
-  {
-    label: "1st menu item",
-    key: "1",
-  },
-  {
-    label: "2nd menu item",
-    key: "2",
-  },
-  {
-    label: "3rd menu item",
-    key: "3",
-  },
-];
-*/
-const Dropdown = (items, onClick) => {
+const Dropdown = ({items, onClick}) => {
+
+  const handleClick = typeof onClick === 'function' ? onClick : () => {};
+  const menuItems = Array.isArray(items) ? items : [];
+
+  const menu = (
+    <StyledMenu onClick={handleClick}>
+      { menuItems.map((item) => (
+        <StyledMenu.Item key={item.key}>
+          <Typography>{item.label}</Typography>
+        </StyledMenu.Item>
+      ))}
+    </StyledMenu>
+  );
+ 
   return (
-    <StyledDropdown menu={{ items, onClick }}>
+    <StyledDropdown overlay={menu}>
       <a onClick={(e) => e.preventDefault()}>
         <Space>
-          Click menu item
+          <Typography>Click menu item</Typography>
           <DownOutlined />
         </Space>
       </a>
