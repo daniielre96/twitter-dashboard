@@ -20,7 +20,7 @@ const Typography = ({ children, color, align, weight, bold, uppercase, italic, u
       italic={italic}
       uppercase={uppercase}
       underline={underline}
-      fontfamily={myStyle.fontfamily}
+      fontfamily={myStyle.fontFamily}
       {...rest}
     >
       {children}
