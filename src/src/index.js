@@ -4,6 +4,9 @@ import Icon, { iconSizes } from './components/icon';
 import Spinner from './components/spinner';
 import Tabs, { sizeVariants } from './components/tabs';
 import Typography from './components/typography';
+import Input from './components/input';
+import InputNumber from './components/input_number';
+import Tooltip from './components/tooltip';
 
 export {
   Button,
@@ -12,6 +15,9 @@ export {
   chartPieConfig,
   Icon,
   iconSizes, sizeVariants, Spinner,
-  Tabs, Typography
+  Tabs, Typography,
+  Input,
+  InputNumber,
+  Tooltip
 };
 
