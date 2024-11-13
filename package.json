@@ -12,6 +12,7 @@
     "antd": "^5.20.6",
     "babel-plugin-module-resolver": "^5.0.2",
     "hex-to-rgba": "^2.0.1",
+    "rc-virtual-list": "^3.15.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
