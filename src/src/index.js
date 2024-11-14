@@ -1,5 +1,6 @@
 import Button, { buttonVariants } from './components/button';
 import ChartPie, { chartPieConfig } from './components/charts/chart-pie';
+import DatePicker from './components/date-picker';
 import Icon, { iconSizes } from './components/icon';
 import List from './components/list';
 import Spinner from './components/spinner';
@@ -10,6 +11,7 @@ export {
   Button,
   buttonVariants,
   ChartPie, chartPieConfig,
+  DatePicker,
   Icon, iconSizes,
   List,
   sizeVariants, Spinner,
